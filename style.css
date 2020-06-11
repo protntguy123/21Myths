@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+body {
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  color: #505962;
+}
+
+.offset::before {
+  height: 3.8rem;
+  margin-top: -3.8rem;
+  content: "";
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background: rgba(0, 0, 0, .6) !important;
+}
+
+.navbar-brand img {
+  height: 5.5rem;
+  width: 9.5rem;
+  padding-left: 3rem;
+}
+
+.navbar-nav li {
+  padding-right: .7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  padding-top: .8rem;
+  font-size: 1.8rem;
+  padding-right: 6rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #00cec9;
+  font-size: 1.9rem;
+}
+
+
+.carousel-item {
+  height: 100vh;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 38%;
+  text-transform: uppercase;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+
+.carousel-caption h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: .3rem;
+  text-shadow: .1rem .1rem .8rem black;
+  padding-bottom: .1rem;
+}
+
+.carousel-caption h3 {
+  font-size: 2rem;
+  text-shadow: .1rem .1rem .5rem black;
+  padding-bottom: 1.6rem;
+}
+
+.btn lg {
+  border-width: medium;
+  border-radius: 0;
+  font-size: 1.1rem;
+}
+
+
+
+
+
+/*============= COURSE SECTION =============*/
+
+.narrow {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.btn-md {
+  border-width: medium;
+  border-radius: 0;
+  padding: .6rem 1.1rem;
+  text-transform: uppercase;
+  margin: 1rem;
+}
+
+.jumbotron {
+  border-radius: 0;
+  padding: 3rem 0 2rem;
+  margin-bottom: 0;
+}
+
+
+
+h3.heading {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 1.9rem;
+}
+
+.heading-underline {
+  width: 3rem;
+  height: .2rem;
+  background-color: #00cec9;
+  margin: 0 auto 2rem;
+}
+
+
+
+
+.row.no-padding [class*=col-] {
+  padding: 0;
+}
+
+.posts {
+  overflow: hidden;
+}
+
+.btn-secondary {
+  border-width: medium;
+  border-radius: 0;
+  padding: .6rem 1.2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 1rem;
+  border-color: #00cec9;
+  background-color: #00cec9;
+  color: white;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  border-color: #00cec9;
+  background-color: #00cec9;
+  color: white;
+}
+
+.card {
+  margin: 2rem;
+
+}
+
+footer {
+  background-color: #40474e;
+  color: white;
+  padding: 2rem 0 3rem;
+  margin-top: 1rem;
+}
+
+footer img {
+  height: 8.9rem;
+  margin: 1.5rem 0;
+}
+
+footer a {
+  color: white;
+}
+
+footer svg.svg-inline--fa {
+  font-size: 1.6rem; 
+  margin: 1.2rem .5rem 0 0;
+}
+
+footer svg.svg-inline--fa:hover {
+  color: #00cec9;
+}
+
+hr.socket {
+  border-top: .2rem solid #00cec9;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .carousel-caption h1 {
+    font-size: 2.8rem;
+    letter-spacing: .15rem;
+    padding-bottom: .5rem;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .btn lg {
+    font-size: 1rem;
+  }
+
+  .narrow h1 {
+    font-size: 1.5rem;
+  }
+
+  p.lead {
+    font-size: 1rem;
+  }
+}
+
+#baiviet {
+  width: 500px;
+  
+  font-size: 30px;
+}
+
