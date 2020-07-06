@@ -134,7 +134,13 @@ h3.heading {
 .posts {
   overflow: hidden;
 }
-
+#editor-container {
+  height: 100px;
+  font-size: large;
+}
+#baiviet {
+  justify-self: center;
+}
 .btn-secondary {
   border-width: medium;
   border-radius: 0;
@@ -218,5 +224,13 @@ hr.socket {
   width: 500px;
   
   font-size: 30px;
+}
+
+#comment {
+  padding:3rem 5rem 0rem 5rem;
+}
+
+#line{
+  width: 70rem;
 }
 
