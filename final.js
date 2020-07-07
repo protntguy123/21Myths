@@ -29,24 +29,29 @@ function createPost(userID, content) {
         numID: 0,
     });
 }
+
 function updateContent(postID, newContent) {
     db.collection("posts").doc(postID).update({
         Content: newContent,
     });
 }
+
 function deletePost(postID) {
     db.collection("posts").doc(postID).delete();
 }
+
 function getPost(postID, callback, callbackPara) {
     db.collection("posts").doc(postID).get().then(function (doc) {
         callback({
             data: doc.data(),
             callbackPara
-            }
-            )
+        })
     });
 }
-const updateComment = ({data, callbackPara}) => {
+const updateComment = ({
+    data,
+    callbackPara
+}) => {
     data["Comments"].push({
         cuserID: callbackPara["userID"],
         comment: callbackPara["content"],
@@ -55,8 +60,13 @@ const updateComment = ({data, callbackPara}) => {
         Comments: data["Comments"]
     })
 }
+
 function addComment(postID, userID, content) {
-    const post = getPost(postID, updateComment, {postID, userID, content})
+    const post = getPost(postID, updateComment, {
+        postID,
+        userID,
+        content
+    })
 }
 
 function addcomment(userID, postID, content) {
@@ -91,16 +101,8 @@ function addPost(userID, content, postID) {
                                     <div class="heading-underline" id="line"></div>
 								
     `;
-    
+
     let commentbutton = document.getElementsByClassName("btn btn-outline-primary");
-    commentbutton.addEventListener('click', () => {
-
-    let contentEl = document.getElementById(String(postID))
-    if ()
-    let content_r = contentEl.value
-    addcomment("Jack", postID, content_r);
-
-});
 }
 
 
@@ -120,7 +122,7 @@ let postbutton = document.getElementById("postbutton");
 postbutton.addEventListener('click', () => {
     let nContent = quill.getText()
     createPost("Jack", nContent)
-    addPost("Jack",nContent)
+    addPost("Jack", nContent)
 });
 
 
@@ -134,3 +136,5 @@ let quill = new Quill('#editor-container', {
     placeholder: 'hãy chia sẻ cảm nghĩ...',
     theme: 'snow' // or 'bubble'
 });
+
+

@@ -86,7 +86,7 @@ body {
 
 
 
-/*============= COURSE SECTION =============*/
+
 
 .narrow {
   width: 75%;
@@ -233,4 +233,65 @@ hr.socket {
 #line{
   width: 70rem;
 }
+
+
+
+
+#loginbutton {
+  background-color: #00cec9;
+  border-color: #00cec9;
+}
+
+.modal-header {
+  background-color: #00cec9;
+  border-color: #00cec9;
+}
+.modal-title {
+  color: aliceblue;
+}
+#loginclosebutton {
+  color: aliceblue;
+}
+
+.modal-footer {
+  background-color: #00cec9;
+  border-color: #00cec9;
+}
+
+#changetosignup {
+  color: rgb(246, 249, 252);
+}
+
+#changetologin {
+  color: rgb(246, 249, 252);
+}
+
+#signupbutton {
+  background-color: #00cec9;
+  border-color: #00cec9;
+}
+#signupclosebutton {
+  color: aliceblue;
+}
+
+.icon {
+  padding-left: 1rem;
+  padding-bottom: 0.3rem;
+  font-size: 1.27rem;
+}
+
+
+#logbut {
+  background-color: #00cec9;
+  border-color: #00cec9;
+  color: rgb(248, 252, 255);
+}
+
+#signbut {
+  background-color: #00cec9;
+  border-color: #00cec9;
+  color:rgb(248, 252, 255);
+  
+}
+
 
