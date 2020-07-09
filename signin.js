@@ -11,27 +11,9 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-function taoID() {
-    x = Math.random();
-    y = x.toString(36);
-    z = y.substr(2, 9);
-    return z;
-}
-const id = taoID();
-email = document.getElementById("namefield");
-password = document.getElementById("agefield");
-ten = document.getElementById("ten");
-tuoi = document.getElementById("tuoi");
-button = document.getElementById("button");
-uid = firebase.database().ref().child("users");
-div = document.getElementById("div");
-uid.on('value', snap => {
-    console.log(snap.val())
-    // object = JSON.stringify(snap.val(), null, 3)
-    // div.innerText = object
-})
 
-function writeData() {
+
+function writeDataSignin() {
     emaill = email.value;
     passwordd = password.value;
     firebase.auth().signInWithEmailAndPassword(emaill, passwordd)
