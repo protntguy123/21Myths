@@ -122,7 +122,7 @@
 				</div>
 			</div>
 
-<!--join-->
+<!--phan link sign in va sign up-->
 			<div id="joinin" class="modal fade">
 				<div class="modal-dialog modal-login">
 					<div class="modal-content">
@@ -131,42 +131,12 @@
 								aria-hidden="true">&times;</button>
 						</div>
 						<div id="join-body"class="modal-body">
-							<button id="logbut" href ="#login" data-toggle="modal" class="btn btn-primary btn-block btn-lg">Log in</button><br>
-							<button id="signbut" href ="#signup" data-toggle="modal" class="btn btn-primary btn-block btn-lg">Sign up</button>
-						</div>
-						<div class="modal-footer">
-						</div>
-					</div>
-				</div>
-			</div>
-
-<!--Login-->
-			<div id="login" class="modal fade">
-				<div class="modal-dialog modal-login">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h4 class="modal-title">Member Login</h4>
-							<button id="loginclosebutton" type="button" class="close" data-dismiss="modal"
-								aria-hidden="true">&times;</button>
-						</div>
-						<div class="modal-body">
-							<form action="" method="post"> 
-								<div class="form-group">
-									<div class="icon"><i class="fa fa-user"></i></div>
-									<input id="loginuser" type="text" class="form-control" placeholder="Username"
-										required="required">
-								</div>
-								<div class="form-group">
-									<div class="icon"><i class="fas fa-lock-alt"></i></div>	
-									<input id="loginpassword" type="password" class="form-control"
-										placeholder="Password" required="required">
-								</div>
-								<div class="form-group">
-									<input id="loginbutton" type="submit" class="btn btn-primary btn-block btn-lg"
-										value="Login">
-								</div>
+							<form method="get" action="/signin.html">
+								<button id="logbut" type="submit" class="btn btn-primary btn-block btn-lg">Log in</button><br>
 							</form>
-
+							<form method="get" action="/signin.html">
+								<button id="signbut" type = "submit" href = "signup.html" class="btn btn-primary btn-block btn-lg">Sign up</button>
+							</form>
 						</div>
 						<div class="modal-footer">
 						</div>
@@ -174,40 +144,7 @@
 				</div>
 			</div>
 
-<!--Sign up-->
-			<div id="signup" class="modal fade">
-				<div class="modal-dialog modal-login">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h4 class="modal-title">Create your account</h4>
-							<button id="signupclosebutton" type="button" class="close" data-dismiss="modal"
-								aria-hidden="true">&times;</button>
-						</div>
-						<div class="modal-body">
-								<div class="form-group">
-									<i class="fa fa-user"></i>
-									<input id="signupuser" type="text" class="form-control" placeholder="Username"
-										required="required">
-								</div>
-								<div class="form-group">
-									<i class="fad fa-lock"></i>
-									<input id="signup-password" type="password" class="form-control"
-										placeholder="Password" required="required"><br>
-									<input id="confirm-signup-password" type="password" class="form-control"
-										placeholder="Confirm password" required="required">
-								</div>
-								<div class="form-group">
-								<button id="signupbutton" onclick="writeDataSignup()" class="btn btn-primary btn-block btn-lg">Sign up</button>
-								</div>
-							
 
-						</div>
-						<div class="modal-footer">
-						</div>
-					</div>
-				</div>
-			</div>
-action
 			<script src="js/jquery-3.3.1.min.js"></script>
 			<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
 			<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
