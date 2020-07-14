@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/fixed.css">
 	<link rel="stylesheet" href="css/all.css">
-
+	
 
 </head>
 
@@ -31,8 +31,7 @@
 					<a class="nav-link" href="#course"><i class="fal fa-comment-alt-plus"></i></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#joinin" class="trigger-btn" data-toggle="modal"><i
-							class="fal fa-user-circle"></i></a>
+					<a class="nav-link" href="#posts"><i class="fal fa-user-circle"></i></a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#contact"><i class="fal fa-question-circle"></i></a>
@@ -87,75 +86,66 @@
 		<div class="jumbotron container-fluid">
 			<div class="col-12 text-center">
 				<h1 class="heading">Bảng tin</h1>
-				<div class="heading-underline"></div>
-
-				<div class="row justify-content-center">
-					<div class="card text-center" id="news">
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-		
-			<div class="col-12 text-center">
-				<div id="contact" class="offset">
-					<footer> 
+				<div class="heading-underline"></div>	
+				
 						<div class="row justify-content-center">
-							<div class="col-sd-5">
-								<img src="img/21Myths.png">
-								<p>Share your moments</p>
-								<strong>Contact Info</strong>
-								<p>(000) 123 4567<br>xxx@gmail.com</p>
-								<a href="https://www.facebook.com/pt1me" target="_blank"><i
-										class="fab fa-facebook-square"></i></a>
-								<a href="https://www.instagram.com/p.time03/" target="_blank"><i
-										class="fab fa-instagram"></i></a>
-								<a href="" target="_blank"><i class="fab fa-twitter-square"></i></a>
+							<div class="card text-center" id= "news">
+
 							</div>
-
-							<hr class="socket">
-							&copy; 21Myths Theme.
-						</div>
-					</footer>
-
-				</div>
-			</div>
-
-<!--phan link sign in va sign up-->
-			<div id="joinin" class="modal fade">
-				<div class="modal-dialog modal-login">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal"
-								aria-hidden="true">&times;</button>
-						</div>
-						<div id="join-body"class="modal-body">
-							<form method="get" action="/signin.html">
-								<button id="logbut" type="submit" class="btn btn-primary btn-block btn-lg">Log in</button><br>
-							</form>
-							<form method="get" action="/signin.html">
-								<button id="signbut" type = "submit" href = "signup.html" class="btn btn-primary btn-block btn-lg">Sign up</button>
-							</form>
-						</div>
-						<div class="modal-footer">
 						</div>
 					</div>
-				</div>
 			</div>
 
+			<div id="team" class="offset">
+				<div class="col-12 text-center">
+					<h1 class="heading">Team</h1>
+					<div class="heading-underline"></div>
+					<div class="row padding">
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-md-6">
+							<div class="card text-center">
+								<img class="card-img-top" src="img/team/team1.png">
+								<div class="card-body">
+									<h4>Truong Adam Nhat Anh</h4>
+									<p>"I'm learning to make websites and this is a blog that i created."</p>
+								</div>
+							</div>
+						</div>
+					</div>
 
-			<script src="js/jquery-3.3.1.min.js"></script>
-			<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
-			<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-			<script type="module" src="final.js"></script>
-			<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
-			<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
-			<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>	
-			<script src="join.js"></script>
-			<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
-			<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
-		
+					<div id="contact" class="offset">
+						<footer>
+							<div class="row justify-content-center">
+								<div class="col-sd-5">
+									<img src="img/21Myths.png">
+									<p>Share your moments</p>
+									<strong>Contact Info</strong>
+									<p>(000) 123 4567<br>xxx@gmail.com</p>
+									<a href="https://www.facebook.com/pt1me" target="_blank"><i
+											class="fab fa-facebook-square"></i></a>
+									<a href="https://www.instagram.com/p.time03/" target="_blank"><i
+											class="fab fa-instagram"></i></a>
+									<a href="" target="_blank"><i class="fab fa-twitter-square"></i></a>
+								</div>
+
+								<hr class="socket">
+								&copy; 21Myths Theme.
+							</div>
+						</footer>
+
+					</div>
+				
+
+				</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+	<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+	<script src="final.js"></script>
+
 </body>
 
 </html>
