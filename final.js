@@ -12,6 +12,7 @@ firebase.initializeApp(firebaseConfig);
 let db = firebase.firestore();
 
 function createPost(userID, content) {
+	console.log(userID, content)
 	let today = new Date();
 	let date =
 		today.getDate() +
@@ -26,6 +27,8 @@ function createPost(userID, content) {
 		Reacts: 0,
 		Comments: [],
 		ReactList: [],
+	}).then(() => {
+		location.reload()
 	});
 }
 function updateContent(postID, newContent) {
@@ -132,7 +135,6 @@ let postbutton = document.getElementById("postbutton");
 postbutton.addEventListener("click", () => {
 	let nContent = quill.getText();
 	createPost(localStorage.getItem('username'), nContent);
-	location.reload()
 })
 
 
