@@ -95,9 +95,12 @@ function addPost(userID, content, postID, comments) {
                                     <div class="heading-underline" id="line"></div>
 								
 	`;
-for (let i = 0; i< comments.length; i++) {
-	addcomment(postID, comments[i].comment, comments[i].cuserID)
-}
+	if (postID) {
+		for (let i = 0; i< comments.length; i++) {
+			addcomment(postID, comments[i].comment, comments[i].cuserID)
+		}
+
+	}
 }
 
 let idList = []
@@ -116,8 +119,8 @@ function renderAllPosts() {
 		.then(function () {
 			for ( let i=0; i<idList.length; i++) {
 				document.getElementById(idList[i]).addEventListener("click", () => {
-					addcomment(idList[i], document.getElementById(cidList[i]).value, "Jack")
-					addComment(idList[i], document.getElementById(cidList[i]).value, "Jack")
+					addcomment(idList[i], document.getElementById(cidList[i]).value, localStorage.getItem('username'))
+					addComment(idList[i], document.getElementById(cidList[i]).value, localStorage.getItem('username'))
 				})
 			}
 		});
@@ -128,9 +131,10 @@ renderAllPosts();
 let postbutton = document.getElementById("postbutton");
 postbutton.addEventListener("click", () => {
 	let nContent = quill.getText();
-	createPost("Jack", nContent);
-	addPost("Jack", nContent);
-});
+	createPost(localStorage.getItem('username'), nContent);
+	location.reload()
+})
+
 
 let quill = new Quill('#editor-container', {
     modules: {
@@ -142,5 +146,4 @@ let quill = new Quill('#editor-container', {
     placeholder: 'hãy chia sẻ cảm nghĩ...',
     theme: 'snow' // or 'bubble'
 });
-
 
