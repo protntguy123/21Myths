@@ -17,6 +17,7 @@ function taoID() {
     z = y.substr(2, 9);
     return z;
 }
+let userlist = []
 const id = taoID();
 email = document.getElementById("namefield");
 password = document.getElementById("agefield");
@@ -27,6 +28,7 @@ uid = firebase.database().ref().child("users");
 div = document.getElementById("div");
 uid.on('value', snap => {
     console.log(snap.val())
+    userlist = snap.val();
     // object = JSON.stringify(snap.val(), null, 3)
     // div.innerText = object
 })
@@ -34,17 +36,35 @@ uid.on('value', snap => {
 async function writeData() {
     emaill = email.value;
     passwordd = password.value;
-    const response = await firebase.auth().signInWithEmailAndPassword(emaill, passwordd);
-    console.log(response);
+    console.log(emaill)
+    console.log(passwordd)
+    const response = await firebase.auth().signInWithEmailAndPassword(emaill, passwordd)
+    // console.log(response);
+    if (response.user.email) {
+        // console.log(userlist);
+        for (let i = 0; i < Object.values(userlist).length; i++) {
+            console.log(Object.values(userlist)[i].email)
+            // localStorage.setItem("lastname", "Smith");
+            console.log(emaill);
+            if (Object.values(userlist)[i].email == emaill) {
+                console.log(Object.values(userlist)[i].username)
+                localStorage.setItem('username', Object.values(userlist)[i].username);
+            }
+        }
+    }
+    // .then(() => {
+    // })
     // .catch(function (error) {
     //     // Handle Errors here.
     //     var errorCode = error.code;
     //     var errorMessage = error.message;
     //     if (errorCode === 'auth/wrong-password') {
     //         alert('Wrong password.');
+    //         return;
     //     } else {
     //         alert(errorMessage);
     //         console.log(error);
+    //         return;
     //     }
     // });
 }

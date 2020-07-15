@@ -20,6 +20,8 @@ function taoID() {
 const id = taoID();
 email = document.getElementById("namefield");
 password = document.getElementById("agefield");
+conpassword = document.getElementById("re-agefield");
+username = document.getElementById("username")
 button = document.getElementById("button");
 uid = firebase.database().ref().child("users");
 div = document.getElementById("div");
@@ -29,10 +31,9 @@ uid.on('value', snap => {
     // div.innerText = object
 })
 
+
 function writeData() {
-    emailValue = email.value;
-    console.log(email.value);
-    passwordValue = password.value;
+    
     firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
     .then(Response => {
         console.log(Response)
@@ -46,7 +47,6 @@ function writeData() {
                 alert('The password is too weak.');
             } else {
                 alert(errorMessage);
-
             }
             console.log(error);
         });
@@ -54,8 +54,24 @@ function writeData() {
         .database()
         .ref("/users/" + " " + id)
         .set({
-            email: password.value,
-            password: email.value,
-            
+            email: email.value,
+            password: password.value,
+            username: username.value
         });
 }
+
+
+    function myFunction() {
+        emailValue = email.value;
+        console.log(email.value);
+        passwordValue = password.value;
+        console.log(conpassword.value);
+        console.log(passwordValue);
+        if (conpassword.value == passwordValue) {
+            writeData();
+            location.href = "index.html"
+        }else {
+            alert("different passwords");
+        }
+    }
+
