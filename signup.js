@@ -31,16 +31,22 @@ uid.on('value', snap => {
 
 function writeData() {
     emailValue = email.value;
+    console.log(email.value);
     passwordValue = password.value;
     firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
+    .then(Response => {
+        console.log(Response)
+    })
         .catch(function (error) {
             // Handle Errors here.
             var errorCode = error.code;
+            console.log(error.code)     
             var errorMessage = error.message;
             if (errorCode == 'auth/weak-password') {
                 alert('The password is too weak.');
             } else {
                 alert(errorMessage);
+
             }
             console.log(error);
         });
@@ -50,5 +56,6 @@ function writeData() {
         .set({
             email: password.value,
             password: email.value,
+            
         });
 }

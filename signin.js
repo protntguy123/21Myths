@@ -31,19 +31,20 @@ uid.on('value', snap => {
     // div.innerText = object
 })
 
-function writeData() {
+async function writeData() {
     emaill = email.value;
     passwordd = password.value;
-    firebase.auth().signInWithEmailAndPassword(emaill, passwordd)
-        .catch(function (error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            if (errorCode === 'auth/wrong-password') {
-                alert('Wrong password.');
-            } else {
-                alert(errorMessage);
-                console.log(error);
-            }
-        });
+    const response = await firebase.auth().signInWithEmailAndPassword(emaill, passwordd);
+    console.log(response);
+    // .catch(function (error) {
+    //     // Handle Errors here.
+    //     var errorCode = error.code;
+    //     var errorMessage = error.message;
+    //     if (errorCode === 'auth/wrong-password') {
+    //         alert('Wrong password.');
+    //     } else {
+    //         alert(errorMessage);
+    //         console.log(error);
+    //     }
+    // });
 }

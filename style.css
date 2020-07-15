@@ -294,4 +294,30 @@ hr.socket {
   
 }
 
+.commentBtns {
+  background-color: #00cec9;
+  color: aliceblue;
+  border-top-left-radius:1rem ;
+  border-bottom-left-radius:1rem ;
+  width: 4rem;
+  border: 0.1rem;
+}
 
+.fa-facebook-square {
+  font-size: 2rem;
+  padding: 7px;
+}
+
+a :hover {
+  color: #00cec9;
+}
+
+.fa-instagram {
+  font-size: 2rem;
+  padding: 7px;
+}
+
+.fa-twitter-square {
+  font-size: 2rem;
+  padding: 7px;
+}

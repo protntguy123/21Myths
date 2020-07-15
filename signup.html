@@ -11,19 +11,18 @@
 	    <link rel="stylesheet" href="css/all.css">
 	</head>
     <body>
-        <div id="con">
+        <form method="get" action="index.html">
+            <button type="submit" class="close" 
+                aria-hidden="true"><i class="fas fa-arrow-alt-left fa-lg"></i></button>
+            </form>
         <div id="container">
-            <form method="get" action="index.html">
-                <button type="submit" class="close" 
-                    aria-hidden="true"><i class="fas fa-arrow-alt-left fa-lg"></i></button>
-                </form>
                 <h1>Sign up</h1>
                 <div id="des">CREATE YOUR FIRST ACCOUNT</div>
                 <div>
-                    <input type="text" placeholder="email" id="agefield" />
+                    <input type="text" placeholder="email" id="namefield" />
                 </div>
                 <div>
-                    <input type="password" placeholder="password" id="namefield" />
+                    <input type="password" placeholder="password" id="agefield" />
                 </div>
                 <button onclick="writeData()" id="button">Sign up</button>
                 <div id="to">
@@ -33,7 +32,7 @@
                 <div id="div"></div>    
                 <p>Already have an account?</p><a href="signin.html">Sign in</a>
             </div>
-        </div>
+        
         <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
