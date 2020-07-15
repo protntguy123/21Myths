@@ -117,6 +117,7 @@ function renderAllPosts() {
 			for ( let i=0; i<idList.length; i++) {
 				document.getElementById(idList[i]).addEventListener("click", () => {
 					addcomment(idList[i], document.getElementById(cidList[i]).value, "Jack")
+					addComment(idList[i], document.getElementById(cidList[i]).value, "Jack")
 				})
 			}
 		});
